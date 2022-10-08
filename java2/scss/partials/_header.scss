@@ -2,6 +2,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 
+
 .top-nav {
   display: flex;
   flex-direction: row;
@@ -121,3 +122,24 @@
     border-bottom: 1px solid #444;
   }
 }
+
+/* header {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 1em;
+  background: linear-gradient(
+    to left,
+    c.primaryColour(primary),
+    c.secondaryColour(ebony)
+  );
+}
+
+.nav {
+  color: c.primaryColour(accent);
+  padding: 0.75em;
+  list-style: none;
+  box-shadow: 0 4px 8px -4px lightblue;
+  border-radius: 8px;
+  cursor: pointer;
+} */
