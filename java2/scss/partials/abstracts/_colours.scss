@@ -1,0 +1,22 @@
+$primary_colour: (
+  primary: #4b7f52,
+  secondary: #7dd181,
+  accent: #96e8bc,
+  mint: #b6f9c9,
+  li: #c9ffe2,
+);
+
+@function primaryColour($colour) {
+  @return map-get($primary_colour, $colour);
+}
+
+$secondary_colour: (
+  primary: #0b2027,
+  secondary: #40798c,
+  accent: #70a9a1,
+  grey: #cfd7c7,
+  ebony: #585540,
+);
+@function secondaryColour($colour) {
+  @return map-get($secondary_colour, $colour);
+}

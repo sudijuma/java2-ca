@@ -1,0 +1,19 @@
+@use "./abstracts/colours" as c;
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: verdana, arial, helvetica;
+  margin: 0;
+  padding: 0;
+  background-color: c.primaryColour(primary);
+}

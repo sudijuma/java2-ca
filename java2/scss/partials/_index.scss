@@ -1,1 +1,7 @@
-@forward './footer';
+@forward "../partials/broilerplate";
+@forward "../partials/header";
+@forward "../partials/footer";
+@forward "../partials/container";
+
+@forward "../partials/abstracts/colours";
+@forward "../partials/abstracts/typography";
