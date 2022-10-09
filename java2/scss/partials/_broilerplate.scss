@@ -12,8 +12,9 @@ html {
 }
 
 body {
+  max-width: 1440px;
   font-family: verdana, arial, helvetica;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   background-color: c.primaryColour(primary);
 }
