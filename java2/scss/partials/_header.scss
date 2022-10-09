@@ -11,8 +11,8 @@
   background-color: #00baf0;
   background: linear-gradient(
     to left,
-    c.primaryColour(primary),
-    c.secondaryColour(ebony)
+    c.colourfull(primary),
+    c.colourfull(secondary)
   );
   color: #fff;
   height: 50px;

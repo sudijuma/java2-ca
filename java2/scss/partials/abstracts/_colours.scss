@@ -20,3 +20,27 @@ $secondary_colour: (
 @function secondaryColour($colour) {
   @return map-get($secondary_colour, $colour);
 }
+
+$colourfull: (
+  primary: #f46036,
+  secondary: #2e294e,
+  accent: #1b998b,
+  rose: #e71d36,
+  june_bud: #c5d86d,
+);
+
+@function colourfull($colour) {
+  @return map-get($colourfull, $colour);
+}
+
+$lavender: (
+  primary: #dfd9e2,
+  secondary: #c3acce,
+  accent: #89909f,
+  steel: #538083,
+  viridian: #2a7f62,
+);
+
+@function lavender($colour) {
+  @return map-get($lavender, $colour);
+}
