@@ -29,7 +29,6 @@
   padding: 0.5em;
   box-shadow: 0 8px 8px -4px white;
   background-color: c.colourfull(accent);
-  border-bottom: 1px solid c.colourfull(primary);
   border-radius: 8px;
 }
 
@@ -42,5 +41,10 @@
 .btn {
   justify-self: baseline;
   flex: 0 1 3em;
-  color: blue;
+  color: c.lavender(primary);
+  background-color: c.colourfull(accent);
+  border-style: none;
+  border-bottom: 1px solid c.colourfull(primary);
+  box-shadow: 0 4px 4px -4px white;
+  cursor: pointer;
 }
