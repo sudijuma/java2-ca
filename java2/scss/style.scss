@@ -4,6 +4,7 @@
 @use "./scss/partials/container";
 @use "./scss/partials/abstracts/colours" as c;
 @use "./scss/partials/brakebpoints/mediaQueries";
+@use "./scss/partials/logIn";
 
 .main {
   width: 100%;
@@ -16,6 +17,8 @@
   align-items: center;
   padding: 2em;
   margin: 8em auto;
+  box-shadow: 0 8px 19px -8px white;
+  border-radius: 8px;
 }
 
 .main__content--box {
@@ -27,7 +30,7 @@
   overflow: hidden;
   margin: 16px;
   padding: 0.5em;
-  box-shadow: 0 8px 8px -4px white;
+  box-shadow: 0 6px 8px -4px white;
   background-color: c.colourfull(accent);
   border-radius: 8px;
 }
@@ -35,7 +38,6 @@
 .main__content--text {
   color: white;
   width: 100%;
-  padding: 0.5em;
 }
 
 .btn {
