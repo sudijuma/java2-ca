@@ -1,10 +1,10 @@
-@use "./scss/partials/header";
-@use "./scss/partials/footer";
-@use "./scss/partials/broilerplate";
-@use "./scss/partials/container";
-@use "./scss/partials/abstracts/colours" as c;
-@use "./scss/partials/brakebpoints/mediaQueries";
-@use "./scss/partials/logIn";
+@use "./partials/header";
+@use "./partials/footer";
+@use "./partials/broilerplate";
+@use "./partials/container";
+@use "./partials/abstracts/colours" as c;
+@use "./partials/brakepoints/mediaQueries";
+@use "./partials/logIn";
 
 .main {
   width: 100%;
