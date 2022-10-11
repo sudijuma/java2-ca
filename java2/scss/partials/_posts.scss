@@ -6,8 +6,20 @@
 }
 
 .post__container {
-  width: 500px;
+  width: 100%;
   height: 200px;
   border: 1px solid white;
   margin: 0 auto;
+  justify-items: center;
+}
+
+.post__container--box {
+  margin: 0;
+}
+
+.by {
+  margin: 0;
+}
+.text {
+  width: 45ch;
 }
