@@ -6,6 +6,7 @@ export default defineConfig({
             input: {
                 home: resolve(__dirname, 'index.html'),
                 login: resolve(__dirname, 'login.html'),
+                posts: resolve(__dirname, 'posts.html'),
             },
         },
     }
