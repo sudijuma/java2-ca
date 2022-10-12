@@ -4,6 +4,7 @@
 @use "./partials/container";
 @use "./partials/abstracts/colours" as c;
 @use "./partials/brakepoints/mediaQueries";
+@use "./partials/landingPage";
 
 .main {
   width: 100%;
