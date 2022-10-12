@@ -1,4 +1,4 @@
-/* import { USER_LOGIN_URL } from "./API_URL/apiUrl.mjs"; */
+/* import { USER_LOGIN_URL } from "./API_URL/apiUrl.mjs";*/
 import { validateEmail } from "./utilities/validation.js";
 /* import { saveUser, saveToken } from "./utilities/storage.mjs"; */
 
@@ -11,7 +11,7 @@ const emailError = document.querySelector("#emailError");
 
 const password = document.querySelector("#password");
 const passwordNotValid = document.querySelector("#passwordError");
-const errorMassage = document.querySelector("error-massage");
+/* const errorMassage = document.querySelector("error-massage"); */
 
 if (logInForm) logInForm.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -41,5 +41,9 @@ if (logInForm) logInForm.addEventListener("submit", function (event) {
     }
 
     let formIsValid = isEmail && validEmail && isPassword;
-    console.log(formIsValid)
+    if(formIsValid) {
+        console.log("Hey, good job buste")
+    } else{
+        console.log("validtaion failed")
+    }
 })
