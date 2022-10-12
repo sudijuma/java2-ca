@@ -5,6 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="/main.js" defer></script>
+    <script type="module" src="./js/logInPage.mjs"></script>
     <title>:: Welcome || Log in ::</title>
   </head>
   <body>
@@ -14,10 +15,11 @@
       <div class="container">
         <label>Email adress : </label>
         <input
-        type="text"
-        placeholder="Enter your email"
-        name="email"
-        required
+          id="email"
+          type="text"
+          placeholder="Enter your email"
+          name="email"
+          required
         />
         <span id="emailNotValid" class="hidden">
           Email is not vaild. Must be stud.noroff or noroff.no email adress.
@@ -25,6 +27,7 @@
         <span id="emailError" class="hidden">Email is required</span>
         <label>Password : </label>
         <input
+          id="password"
           type="password"
           placeholder="Enter Password"
           name="password"
@@ -39,5 +42,6 @@
         Forgot <a href="#"> password? </a>
       </div>
     </form>
+    <p id="error-message" class="error_text"></p>
   </body>
 </html>
