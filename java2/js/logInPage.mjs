@@ -5,6 +5,7 @@ import { validateEmail } from "./utilities/validation.js";
 const logInForm = document.querySelector("#login-form");
 
 const email = document.querySelector("#email");
+console.log(email);
 const emailNotValid = document.querySelector("#emailNotValid");
 const emailError = document.querySelector("#emailError");
 
@@ -37,8 +38,9 @@ if (logInForm)
         if (password.value.trim().length >= 8) {
             passwordNotValid.classList.add("hidden");
             isPassword = true;
+            console.log("isPassword", isPassword);
         } else {
-            passwordNotValid.remove("hidden");
+            passwordNotValid.classList.remove("hidden");
         }
 
         let formIsValid = isEmail && validEmail && isPassword;
@@ -48,3 +50,5 @@ if (logInForm)
             console.log("validtaion failed")
         }
     })
+
+    //TODO make the api call
