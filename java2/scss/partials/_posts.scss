@@ -1,9 +1,3 @@
-body{
-  background-image: url("upload/background/dark-honeycomb.png");
-  background-size: 10%;
-
-}
-
 .grid__container {
   display: grid;
   grid-template-columns: 1fr;
@@ -21,7 +15,6 @@ body{
 
 .post__container--box {
   min-width: 100%;
-
 }
 
 /* .by {
