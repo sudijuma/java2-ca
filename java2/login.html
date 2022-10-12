@@ -12,20 +12,17 @@
     <center><h1>Student Login Form</h1></center>
     <form id="login-form">
       <div class="container">
-        <label>Your Name: New users only </label>
-        <input
-          type="text"
-          placeholder="Enter Name"
-          name="name"
-          required
-        />
         <label>Email adress : </label>
         <input
-          type="text"
-          placeholder="Enter your email"
-          name="email"
-          required
+        type="text"
+        placeholder="Enter your email"
+        name="email"
+        required
         />
+        <span id="emailNotValid" class="hidden">
+          Email is not vaild. Must be stud.noroff or noroff.no email adress.
+        </span>
+        <span id="emailError" class="hidden">Email is required</span>
         <label>Password : </label>
         <input
           type="password"
@@ -33,8 +30,10 @@
           name="password"
           required
         />
+        <span id="passwordError" class="hidden"
+          >Password is required and must be over 8 characters</span
+        >
         <button type="submit">Login</button>
-        <button type="submit">Register new user</button>
         <input type="checkbox" checked="checked" /> Remember me
         <button type="button" class="cancelbtn">Cancel</button>
         Forgot <a href="#"> password? </a>
