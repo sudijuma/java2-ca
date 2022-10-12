@@ -13,37 +13,38 @@ const password = document.querySelector("#password");
 const passwordNotValid = document.querySelector("#passwordError");
 /* const errorMassage = document.querySelector("error-massage"); */
 
-if (logInForm) logInForm.addEventListener("submit", function (event) {
-    event.preventDefault();
+if (logInForm)
+    logInForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-    let isEmail = false;
-    if (email.value.trim().length > 0) {
-        emailError.classList.add("hidden");
-        isEmail = true;
-    } else {
-        emailError.classList.remove("hidden");
-    }
+        let isEmail = false;
+        if (email.value.trim().length > 0) {
+            emailError.classList.add("hidden");
+            isEmail = true;
+        } else {
+            emailError.classList.remove("hidden");
+        }
 
-    let validEmail = false;
-    if (email.value.trim().length && validateEmail(email.value) === true) {
-        emailError.classList.add("hidden");
-        validEmail = true;
-    } else if (email.value.trim().length && validateEmail(email.value) !== true) {
-        emailNotValid.classList.remove("hidden");
-    }
+        let validEmail = false;
+        if (email.value.trim().length && validateEmail(email.value) === true) {
+            emailError.classList.add("hidden");
+            validEmail = true;
+        } else if (email.value.trim().length && validateEmail(email.value) !== true) {
+            emailNotValid.classList.remove("hidden");
+        }
 
-    let isPassword = false;
-    if (password.value.trim().length >= 8) {
-        passwordNotValid.classList.add("hidden");
-        isPassword = true;
-    } else {
-        passwordNotValid.remove("hidden");
-    }
+        let isPassword = false;
+        if (password.value.trim().length >= 8) {
+            passwordNotValid.classList.add("hidden");
+            isPassword = true;
+        } else {
+            passwordNotValid.remove("hidden");
+        }
 
-    let formIsValid = isEmail && validEmail && isPassword;
-    if(formIsValid) {
-        console.log("Hey, good job buste")
-    } else{
-        console.log("validtaion failed")
-    }
-})
+        let formIsValid = isEmail && validEmail && isPassword;
+        if (formIsValid) {
+            console.log("Hey, good job buste")
+        } else {
+            console.log("validtaion failed")
+        }
+    })
