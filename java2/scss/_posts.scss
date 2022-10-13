@@ -16,6 +16,7 @@
 .content_container--post {
   flex: 0 1 15em;
   overflow: hidden;
+  position: relative;
   margin: 16px;
   padding: 0.5em;
   box-shadow: 0 6px 8px -4px white;
@@ -23,17 +24,19 @@
   border-radius: 8px;
 }
 
-.post__title{
-    margin: 0;
+.post__title {
+  margin: 0;
 }
 
-.author{
-    margin: 0;
+.author {
+  margin: 0;
 }
 
-.interact{
-    width: 20vw;
-    position: relative;
-    bottom: 0;
-
+.interact {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width:50%;
+  height: 50%;
+  margin: auto;
 }
