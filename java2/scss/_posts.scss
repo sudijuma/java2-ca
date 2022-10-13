@@ -1,2 +1,39 @@
 @use "./partials/abstracts/colours" as c;
 
+.posts__main {
+  padding: 2em;
+}
+.content__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  padding: 2em;
+  margin: 8em auto;
+  box-shadow: 0 8px 19px -8px c.colourfull(primary);
+  border-radius: 4px;
+}
+
+.content_container--post {
+  flex: 0 1 15em;
+  overflow: hidden;
+  margin: 16px;
+  padding: 0.5em;
+  box-shadow: 0 6px 8px -4px white;
+  background-color: c.colourfull(accent);
+  border-radius: 8px;
+}
+
+.post__title{
+    margin: 0;
+}
+
+.author{
+    margin: 0;
+}
+
+.interact{
+    width: 20vw;
+    position: relative;
+    bottom: 0;
+
+}
