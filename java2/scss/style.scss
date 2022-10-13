@@ -4,6 +4,7 @@
 @use "./partials/abstracts/colours" as c;
 @use "./partials/brakepoints/index" as mq;
 @use "./index";
+@use "./posts";
 
 .main {
   width: 100%;
@@ -16,7 +17,7 @@
   align-items: center;
   padding: 2em;
   margin: 8em auto;
-  box-shadow: 0 8px 19px -8px white;
+  box-shadow: 0 8px 19px -8px c.colourfull(primary);
   border-radius: 8px;
 }
 
