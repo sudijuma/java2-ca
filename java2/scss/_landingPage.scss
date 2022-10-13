@@ -1,3 +1,32 @@
-.main{
-    display: flex;
+@use "./partials/brakepoints/index" as breakePoints;
+@use "./partials/abstracts/colours" as c;
+.container__landingPage {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  @include breakePoints.mq(medium) {
+    flex-direction: row;
+  }
+  max-width: 500px;
+  margin: 15em auto;
+  padding: 0.5em;
+}
+
+.flexBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid c.colourfull(june_bud);
+  height: 15em;
+  @include breakePoints.mq(medium) {
+    flex: 1 0 auto;
+  }
+}
+.action--box {
+  flex: 1 0 auto;
+  color: c.colourfull(primary);
+}
+
+.text{
+    color: c.colourfull(accent);
 }
