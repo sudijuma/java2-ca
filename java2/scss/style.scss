@@ -1,12 +1,9 @@
 @use "./partials/header";
 @use "./partials/footer";
 @use "./partials/broilerplate";
-@use "./partials/container";
 @use "./partials/abstracts/colours" as c;
-@use "./partials/brakepoints/mediaQueries" as mq;
-@use "./landingPage";
-@use "./login";
-@use "./posts";
+@use "./partials/brakepoints/index" as mq;
+@use "./index";
 
 .main {
   width: 100%;

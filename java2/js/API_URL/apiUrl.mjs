@@ -1,4 +1,4 @@
-import  {getUserName} from "../utils/storage";
+import  {getUserName} from "../utilities/storage.mjs";
 
 const userName = getUserName();
 console.log("userName: ",userName);

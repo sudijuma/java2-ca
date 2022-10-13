@@ -1,6 +1,6 @@
-/* import { USER_LOGIN_URL } from "./API_URL/apiUrl.mjs";*/
+import { USER_LOGIN_URL } from "./API_URL/apiUrl.mjs";
 import { validateEmail } from "./utilities/validation.js";
-/* import { saveUser, saveToken } from "./utilities/storage.mjs"; */
+import { saveUser, saveToken } from "./utilities/storage.mjs";
 
 const logInForm = document.querySelector("#login-form");
 
@@ -45,10 +45,45 @@ if (logInForm)
 
         let formIsValid = isEmail && validEmail && isPassword;
         if (formIsValid) {
-            console.log("Hey, good job buste")
+            console.log("Validation");
+            const userData = {
+                "email": email.value,
+                "password": password.value
+            }
+            const USER_LOGIN_URL_ENDPOINT = `${USER_LOGIN_URL}`;
+            (async function logIn() {
+                const response = await login(USER_LOGIN_URL_ENDPOINT, {
+                    method: "POST",
+                    headers: {
+                        "Content-type": "application/json"
+                    },
+                    body: JSON.stringify(userData)
+                });
+                if (response.ok) {
+                    const data = response.json();
+                    console.log(data);
+                    console.log(data.accessToken);
+                    saveToken(data.accessToken);
+                    const userToSave = {
+                        name: data.name,
+                        email: data.email
+                    }
+                    console.log(userToSave);
+                    saveUser(userToSave)
+                    location.href = "./index.html"
+                } else {
+                    const err = await response.json();
+                    const message = `oopsi ${err.massage}`;
+                    console.log("post failed");
+                    throw new Error(message);
+                }
+            })().catch(err => {
+                console.log(`sorry ${err.massage}`)
+            });
         } else {
-            console.log("validtaion failed")
+            console.log("validation failed, sucka");
         }
-    })
+    });
+
 
     //TODO make the api call
