@@ -6,9 +6,16 @@ $breakpoints: (
   large: 90em,
 );
 
-@mixin mq($key) {
+@mixin min_width($key) {
   $size: map.get($breakpoints, $key);
   @media (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin max_width($key) {
+  $size: map.get($breakpoints, $key);
+  @media (max-width: $size) {
     @content;
   }
 }

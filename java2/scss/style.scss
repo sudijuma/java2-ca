@@ -3,7 +3,7 @@
 @use "./partials/broilerplate";
 @use "./partials/container";
 @use "./partials/abstracts/colours" as c;
-@use "./partials/brakepoints/mediaQueries";
+@use "./partials/brakepoints/mediaQueries" as mq;
 @use "./landingPage";
 @use "./login";
 @use "./posts";
@@ -38,14 +38,18 @@
 }
 
 .main__content--text {
-  color: white;
+  color: c.secondaryColour(grey);
   width: 100%;
 }
 
+.btn-container {
+  margin-bottom: 0;
+}
+
 .btn {
-  justify-self: baseline;
-  flex: 0 1 3em;
-  color: c.lavender(primary);
+  flex: 1 0 auto;
+  min-width: 5em;
+  color: c.colourfull(secondary);
   background-color: c.colourfull(accent);
   border-style: none;
   border-bottom: 1px solid c.colourfull(primary);
