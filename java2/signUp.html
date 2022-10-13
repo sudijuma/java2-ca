@@ -5,15 +5,22 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="/main.js" defer></script>
-    <script type="module" src="./js/logInPage.mjs"></script>
-    <title>:: Welcome || Log in ::</title>
+    <script type="module" src="./js/signUp.mjs"></script>
+    <title>:: Sign up ::</title>
   </head>
   <body>
-    <h1 class="fix">halleluja</h1>
-    <center><h1>Student Login Form</h1></center>
-
-    <div class="form__container">
+    <h1 class="sign_up_page">Hi and welcome to sign up.</h1>
     <form id="login-form">
+      <div class="container">
+        <label>Your Name : </label>
+        <input
+          id="name"
+          type="text"
+          placeholder="State your name"
+          name="name"
+          required
+        />
+
         <label>Email adress : </label>
         <input
           id="email"
@@ -36,7 +43,14 @@
           name="password"
           required
         />
-      
+        <label>Confirm Password : </label>
+        <input
+          id="confirmPassword"
+          type="password"
+          placeholder="Confirm Password"
+          name="password"
+          required
+        />
         <span id="passwordError" class="hidden"
           >Password is required and must be over 8 characters</span
         >

@@ -1,0 +1,4 @@
+@use "./partials/abstracts/colours" as c;
+.sign_up_page {
+  color: c.colourfull(primary) ;
+}

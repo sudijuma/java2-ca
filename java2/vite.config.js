@@ -8,6 +8,7 @@ export default defineConfig({
                 login: resolve(__dirname, 'login.html'),
                 posts: resolve(__dirname, 'posts.html'),
                 landingPage: resolve(__dirname, 'landingPage.html'),
+                signUp: resolve(__dirname, 'signUp.html'),
             },
         },
     }

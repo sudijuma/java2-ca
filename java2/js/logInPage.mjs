@@ -14,7 +14,7 @@ const password = document.querySelector("#password");
 const passwordNotValid = document.querySelector("#passwordError");
 /* const errorMassage = document.querySelector("error-massage"); */
 
-if (logInForm)
+if (logInForm) {
     logInForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
@@ -45,11 +45,11 @@ if (logInForm)
 
         let formIsValid = isEmail && validEmail && isPassword;
         if (formIsValid) {
-            console.log("Validation");
             const userData = {
                 "email": email.value,
                 "password": password.value
             }
+            console.log(userData);
             const USER_LOGIN_URL_ENDPOINT = `${USER_LOGIN_URL}`;
             (async function logIn() {
                 const response = await login(USER_LOGIN_URL_ENDPOINT, {
@@ -61,7 +61,7 @@ if (logInForm)
                 });
                 if (response.ok) {
                     const data = response.json();
-                    console.log(data);
+                    console.log("data", data);
                     console.log(data.accessToken);
                     saveToken(data.accessToken);
                     const userToSave = {
@@ -70,7 +70,7 @@ if (logInForm)
                     }
                     console.log(userToSave);
                     saveUser(userToSave)
-                    location.href = "./index.html"
+                    window.location.href = "./index.html"
                 } else {
                     const err = await response.json();
                     const message = `oopsi ${err.massage}`;
@@ -84,6 +84,6 @@ if (logInForm)
             console.log("validation failed, sucka");
         }
     });
-
+}
 
     //TODO make the api call
