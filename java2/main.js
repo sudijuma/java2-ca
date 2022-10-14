@@ -10,3 +10,4 @@ if (logOutBtn) {
         window.location.replace("/landingpage.html");
     })
 }
+//TODO ändra strukturen!!
