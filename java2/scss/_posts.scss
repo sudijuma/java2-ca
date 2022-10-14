@@ -4,9 +4,10 @@
   padding: 2em;
 }
 .content__container {
-  display: flex;
-  flex-direction: column;
-  max-width: 500px;
+  display: grid;
+  grid-template-columns: 1fr;
+  // grid-template-rows: 1fr;
+  max-width: 800px;
   padding: 2em;
   margin: 8em auto;
   box-shadow: 0 8px 19px -8px c.colourfull(primary);
@@ -14,29 +15,22 @@
 }
 
 .content_container--post {
-  flex: 0 1 15em;
   overflow: hidden;
+  flex: 0 1 15em;
+  font-size: 12px;
   position: relative;
   margin: 16px;
   padding: 0.5em;
-  box-shadow: 0 6px 8px -4px white;
-  background-color: c.colourfull(accent);
+  box-shadow: 0 6px 8px -4px c.colourfull(primary);
+  background-color: c.lavender(steel);
   border-radius: 8px;
 }
 
-.post__title {
-  margin: 0;
+.post__title{
+  color: c.primaryColour(accent);
 }
 
-.author {
-  margin: 0;
-}
-
-.interact {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width:50%;
-  height: 50%;
-  margin: auto;
+.post__text {
+  color: c.primaryColour(li);
+  width: auto;
 }
