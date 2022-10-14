@@ -1,7 +1,9 @@
+@use "./partials/abstracts/colours" as c;
+
 button {
-  background-color: #4caf50;
+  background-color: c.lavender(viridian);
   width: 100%;
-  color: orange;
+  color: c.lavender(secondary);
   padding: 15px;
   margin: 10px 0px;
   border: none;

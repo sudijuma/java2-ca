@@ -7,8 +7,9 @@ export default defineConfig({
                 home: resolve(__dirname, 'index.html'),
                 login: resolve(__dirname, 'login.html'),
                 posts: resolve(__dirname, 'posts.html'),
-                landingPage: resolve(__dirname, 'landingPage.html'),
-                signUp: resolve(__dirname, 'signUp.html'),
+                landingpage: resolve(__dirname, 'landingpage.html'),
+                signup: resolve(__dirname, 'signup.html'),
+                createpost: resolve(__dirname, 'createpost.html'),
             },
         },
     }

@@ -6,6 +6,7 @@
 @use "./index";
 @use "./posts";
 
+
 .main {
   width: 100%;
 }
@@ -31,7 +32,7 @@
   margin: 16px;
   padding: 0.5em;
   box-shadow: 0 6px 8px -4px white;
-  background-color: c.colourfull(accent);
+  background-color: c.lavender(steel);
   border-radius: 8px;
 }
 
@@ -45,10 +46,11 @@
 }
 
 .btn {
-  flex: 1 0 auto;
-  min-width: 5em;
+  flex: 1 0 2em;
+  // min-width: 5em;
   color: c.colourfull(secondary);
-  background-color: c.colourfull(accent);
+  background-color: c.primaryColour(li);
+  border-radius: 8px;
   border-style: none;
   border-bottom: 1px solid c.colourfull(primary);
   box-shadow: 0 4px 4px -4px white;

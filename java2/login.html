@@ -9,11 +9,12 @@
     <title>:: Welcome || Log in ::</title>
   </head>
   <body>
-    <h1 class="fix">halleluja</h1>
+    <section class="top-nav" id="nav-bar">
+    </section>
     <center><h1>Student Login Form</h1></center>
 
     <div class="form__container">
-    <form id="login-form">
+      <form id="login-form">
         <label>Email adress : </label>
         <input
           id="email"
@@ -36,7 +37,7 @@
           name="password"
           required
         />
-      
+
         <span id="passwordError" class="hidden"
           >Password is required and must be over 8 characters</span
         >
@@ -44,8 +45,8 @@
         <input type="checkbox" checked="checked" /> Remember me
         <button type="button" class="cancelbtn">Cancel</button>
         Forgot <a href="#"> password? </a>
-      </div>
-    </form>
-    <p id="error-message" class="error_text"></p>
+      </form>
+      <p id="error-message" class="error_text"></p>
+    </div>
   </body>
 </html>

@@ -18,3 +18,19 @@ body {
   padding: 0;
   background-color: c.secondaryColour(primary);
 }
+
+h1,
+h2 {
+  color: c.primaryColour(primary);
+  font-size: clamp(1.5rem, 2.5vw, 4rem); 
+}
+.log__in {
+  color: c.secondaryColour(accent);
+  font-size: clamp(1.5rem, 2.5vw, 4rem); 
+
+}
+.form__container,
+#emailError,
+#emailNotValid{
+  color: c.colourfull(accent);
+}

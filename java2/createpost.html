@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="/main.js" defer></script>
+    <title>:: Create Post ::</title>
+  </head>
+  <body>
+    <div class="create_post_container">
+      <h1>
+        <span>Create Post</span>
+      </h1>
+      <form action="submit">
+        <h2>Create a Post, NOW!!</h2>
+        <div class="flex_container">
+          <label for="postTitle" class="postTitle"
+            >Post Title: (Required)
+          </label>
+          <input
+            id="postTitle"
+            class="postTitleInput"
+            name="postTitle"
+            type="text"
+            placeholder="Enter post title"
+          />
+          <span id="postTitleError" class="hidden">
+            Post Title is required
+          </span>
+        </div>
+        <div class="flex_container">
+          <label for="postDescription" class="postDescription"
+            >Description: (Required)
+          </label>
+          <textarea
+            rows="3"
+            name="postDescription"
+            id="postDescription"
+            class="postTextArea"
+            placeholder="Write a description..."
+          ></textarea>
+          <span id="postDescriptionError" class="hidden text-sm text-red-500">
+            Post Description is required
+          </span>
+        </div>
+        <button
+          class="postBtn"
+          type="submit"
+        >
+          create
+        </button>
+      </form>
+      <p
+        id="general-error-message"
+        class="hidden"
+      ></p>
+    </div>
+  </body>
+</html>
