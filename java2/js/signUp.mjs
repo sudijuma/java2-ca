@@ -117,5 +117,5 @@ contactForm.addEventListener("submit", function (event) {
     })();
   } else {
     console.log("Validation FAILED!! 💩");
-   }
+  }
 });
