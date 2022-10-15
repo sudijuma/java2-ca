@@ -37,7 +37,7 @@ function createHeader() {
         }
         navBar.innerHTML = `
         <ul class="menu">
-        ${navLinks}
+        ${dynamicLinks}
         </ul>
         `
     }
