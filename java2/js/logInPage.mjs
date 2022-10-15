@@ -2,6 +2,9 @@ import { USER_LOGIN_URL } from "./API_URL/apiUrl.mjs";
 import { validateEmail } from "./utilities/validation.js";
 import { saveUser, saveToken } from "./utilities/storage.mjs";
 
+import  createHeader from "./components/header";
+
+createHeader();
 const logInForm = document.querySelector("#login-form");
 
 const email = document.querySelector("#email");
@@ -63,7 +66,7 @@ if (logInForm) {
           body: JSON.stringify(userData)
         });
         if (response.ok) {
-          const data = response.json();
+          const data = await response.json();
           console.log("data", data);
           console.log(data.accessToken);
           saveToken(data.accessToken);

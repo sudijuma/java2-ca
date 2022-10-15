@@ -91,7 +91,7 @@ contactForm.addEventListener("submit", function (event) {
       "email": email.value,
       "password": password.value,
     };
-console.log(userData);
+    console.log(userData);
     const REGISTER_USER_URL_ENDPOINT = USER_SIGNUP_URL;
 
     (async function signUpUser() {
@@ -101,13 +101,14 @@ console.log(userData);
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify(userData),
+          body: JSON.stringify(userData)
         });
 
         const data = await response.json();
 
         if (response.ok) {
           console.log("POST REQUEST SUCCEEDED!!  🥳 🤗🤗");
+          window.location.href = "./index.html";
         } else {
           generalErrorMessage.innerHTML = `Sorry !! ${data.message}`;
         }

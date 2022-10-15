@@ -22,15 +22,31 @@ body {
 h1,
 h2 {
   color: c.primaryColour(primary);
-  font-size: clamp(1.5rem, 2.5vw, 4rem); 
+  font-size: clamp(1.5rem, 2.5vw, 4rem);
 }
 .log__in {
   color: c.secondaryColour(accent);
-  font-size: clamp(1.5rem, 2.5vw, 4rem); 
-
+  font-size: clamp(1.5rem, 2.5vw, 4rem);
 }
 .form__container,
 #emailError,
-#emailNotValid{
+#emailNotValid {
   color: c.colourfull(accent);
 }
+
+// a:link {
+//   text-decoration: none;
+//   color: c.colourfull(accent);
+// }
+
+// a:visited {
+//   text-decoration: none;
+// }
+
+// a:hover {
+//   text-decoration: underline;
+// }
+
+// a:active {
+//   text-decoration: underline;
+// }

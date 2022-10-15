@@ -22,14 +22,15 @@
 .menu {
   display: flex;
   flex-direction: row;
-  list-style-type: none;
+  list-style-type:none;
   margin: 0;
   padding: 0;
 }
 
 .menu > li {
-  margin: 0 1rem;
+  margin: 0 5rem;
   overflow: hidden;
+  color: c.colourfull(viridian);
 }
 
 .menu-button-container {
