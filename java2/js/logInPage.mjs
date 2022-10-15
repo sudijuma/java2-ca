@@ -48,18 +48,19 @@ if (logInForm) {
     let formIsValid = isEmail && validEmail && isPassword;
     if (formIsValid) {
       const userData = {
-        email: email.value,
-        password: password.value,
+        "email": email.value,
+        "password": password.value,
       };
       console.log(userData);
-      const USER_LOGIN_URL_ENDPOINT = `${USER_LOGIN_URL}`;
+      const USER_LOGIN_URL_ENDPOINT = USER_LOGIN_URL;
+
       (async function logIn() {
-        const response = await login(USER_LOGIN_URL_ENDPOINT, {
+        const response = await fetch(USER_LOGIN_URL_ENDPOINT, {
           method: "POST",
           headers: {
-            "Content-type": "application/json",
+            "Content-type": "application/json"
           },
-          body: JSON.stringify(userData),
+          body: JSON.stringify(userData)
         });
         if (response.ok) {
           const data = response.json();
@@ -67,8 +68,8 @@ if (logInForm) {
           console.log(data.accessToken);
           saveToken(data.accessToken);
           const userToSave = {
-            name: data.name,
-            email: data.email,
+            "name": data.name,
+            "email": data.email,
           };
           console.log(userToSave);
           saveUser(userToSave);

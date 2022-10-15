@@ -69,7 +69,7 @@ contactForm.addEventListener("submit", function (event) {
   isValidPasswordMatch = validatePassword(
     password.value,
     confirmPassword.value
-  ); // true // false
+  );
   if (isValidPasswordMatch) {
     confirmPasswordErrorNotMatching.classList.add("hidden");
     isValidPasswordMatch = true;
@@ -87,11 +87,11 @@ contactForm.addEventListener("submit", function (event) {
   if (isFormValid) {
     console.log("Validation SUCCEEDED!!  🥳");
     const userData = {
-      name: firstName.value,
-      email: email.value,
-      password: password.value,
+      "name": firstName.value,
+      "email": email.value,
+      "password": password.value,
     };
-
+console.log(userData);
     const REGISTER_USER_URL_ENDPOINT = USER_SIGNUP_URL;
 
     (async function signUpUser() {
@@ -99,7 +99,7 @@ contactForm.addEventListener("submit", function (event) {
         const response = await fetch(REGISTER_USER_URL_ENDPOINT, {
           method: "POST",
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application/json"
           },
           body: JSON.stringify(userData),
         });
