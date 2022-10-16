@@ -4,7 +4,7 @@ import { getUserName } from "../utilities/storage.mjs";
 
 function createHeader() {
     const { pathname } = document.location;
-    const navBar = document.querySelector("#top-nav");
+    const navBar = document.querySelector("#nav-bar");
     if (navBar) {
         const userName = getUserName();
         let dynamicLinks = `

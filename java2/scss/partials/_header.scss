@@ -22,6 +22,7 @@
 .menu {
   display: flex;
   flex-direction: row;
+  align-items: center;
   list-style-type:none;
   margin: 0;
   padding: 0;
@@ -47,6 +48,9 @@
   display: none;
 }
 
+.text_menu_logged_in{
+
+}
 .menu-button,
 .menu-button::before,
 .menu-button::after {
