@@ -6,7 +6,7 @@
 }
 .postContainer {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   // grid-template-rows: 1fr;
   max-width: 800px;
   padding: 2em;
@@ -24,13 +24,12 @@
 
 .postContainer--contentContainer {
   overflow: hidden;
-  flex: 0 1 15em;
   font-size: 12px;
   position: relative;
   margin: 16px;
   padding: 0.5em;
   box-shadow: 0 6px 8px -4px c.colourfull(primary);
-  background-color: c.lavender(primary);
+  background-color: c.lavender(steel);
   border-radius: 8px;
 }
 
@@ -43,28 +42,28 @@
     flex: 1;
     padding: 0.5em;
     justify-content: center;
-    background-color: c.lavender(primary);
+    background-color: c.lavender(steel);
   }
 }
 .postContainer--author {
-  color: c.colourfull(primary);
+  color: c.secondaryColour(accent);
 }
 
 .postContainer--title {
   color: c.colourfull(accent);
-  font-size: clamp(1.5rem, 2.5vw, 4rem);
+  font-size: clamp(1.5rem, 3vw, 3rem);
 }
 
 .time {
   margin: 0.5em;
-  background-color: c.lavender(primary);
+  background-color: c.lavender(steel);
 }
 .postContainer--body {
   padding: 0.5em;
-  background-color: c.lavender(primary);
+  background-color: c.lavender(steel);
   .postContainer--text {
     font-size: clamp(1rem, 0.2vw, 2rem);
-    background-color: c.lavender(primary);
-    color: c.colourfull(accent);
+    background-color: c.lavender(steel);
+    color: c.secondaryColour(grey);
   }
 }
