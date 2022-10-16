@@ -91,5 +91,3 @@ if (logInForm) {
     }
   });
 }
-
-//TODO make the api call
