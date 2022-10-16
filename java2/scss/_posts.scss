@@ -1,9 +1,10 @@
 @use "./partials/abstracts/colours" as c;
+@use "./partials/broilerplate";
 
-.posts__main {
+.postMain {
   padding: 2em;
 }
-.content__container {
+.postContainer {
   display: grid;
   grid-template-columns: 1fr;
   // grid-template-rows: 1fr;
@@ -14,7 +15,14 @@
   border-radius: 4px;
 }
 
-.content_container--post {
+.PostContainer--headline {
+  font-weight: 400;
+  & .headline--text {
+    color: c.colourfull(primary);
+  }
+}
+
+.postContainer--contentContainer {
   overflow: hidden;
   flex: 0 1 15em;
   font-size: 12px;
@@ -22,15 +30,41 @@
   margin: 16px;
   padding: 0.5em;
   box-shadow: 0 6px 8px -4px c.colourfull(primary);
-  background-color: c.lavender(steel);
+  background-color: c.lavender(primary);
   border-radius: 8px;
 }
 
-.post__title{
-  color: c.primaryColour(accent);
+.postContainer--insert {
+  background-color: white;
+}
+.postContainer--flex {
+  display: flex;
+  .flex--1 {
+    flex: 1;
+    padding: 0.5em;
+    justify-content: center;
+    background-color: c.lavender(primary);
+  }
+}
+.postContainer--author {
+  color: c.colourfull(primary);
 }
 
-.post__text {
-  color: c.primaryColour(li);
-  width: auto;
+.postContainer--title {
+  color: c.colourfull(accent);
+  font-size: clamp(1.5rem, 2.5vw, 4rem);
+}
+
+.time {
+  margin: 0.5em;
+  background-color: c.lavender(primary);
+}
+.postContainer--body {
+  padding: 0.5em;
+  background-color: c.lavender(primary);
+  .postContainer--text {
+    font-size: clamp(1rem, 0.2vw, 2rem);
+    background-color: c.lavender(primary);
+    color: c.colourfull(accent);
+  }
 }
