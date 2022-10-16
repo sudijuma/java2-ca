@@ -5,6 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="/main.js" defer></script>
+    <script type="module" src="./js/createPost.mjs" defer></script>
     <title>:: Create Post ::</title>
   </head>
   <body>
@@ -12,7 +13,7 @@
       <h1>
         <span>Create Post</span>
       </h1>
-      <form action="submit">
+      <form action="submit" class="create-form" id="create-form">
         <h2>Create a Post, NOW!!</h2>
         <div class="flex_container">
           <label for="postTitle" class="postTitle"
@@ -26,35 +27,27 @@
             placeholder="Enter post title"
           />
           <span id="postTitleError" class="hidden">
-            Post Title is required
+            Post Title is required and must be at least 3 characters
           </span>
         </div>
         <div class="flex_container">
-          <label for="postDescription" class="postDescription"
+          <label for="postText" class="postText"
             >Description: (Required)
           </label>
           <textarea
             rows="3"
-            name="postDescription"
-            id="postDescription"
+            name="postText"
+            id="postText"
             class="postTextArea"
             placeholder="Write a description..."
           ></textarea>
-          <span id="postDescriptionError" class="hidden text-sm text-red-500">
-            Post Description is required
+          <span id="postTextError" class="hidden">
+            Post Description is required and must be over 5 characters
           </span>
         </div>
-        <button
-          class="postBtn"
-          type="submit"
-        >
-          create
-        </button>
+        <button class="postBtn" type="submit">create</button>
       </form>
-      <p
-        id="general-error-message"
-        class="hidden"
-      ></p>
+      <p id="general-error-message" class="hidden"></p>
     </div>
   </body>
 </html>
