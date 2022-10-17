@@ -33,18 +33,12 @@ createForm.addEventListener("submit", function (event) {
   }
   let formIsValid = hasPostTitle && hasPostText;
   if (formIsValid) {
-    console.log(postTitle.value);
-    console.log(postText.value);
     const postData = {
       "title": postTitle.value,
       "body": postText.value,
     };
-    console.log("post data", postData);
 
-    const accessToken = getToken();
-    console.log("accessToken", accessToken);
-    console.log("apiUrl", CREATE_POST_URL);
-    
+    const accessToken = getToken();    
     (async function createPost() {
       const response = await fetch(CREATE_POST_URL, {
         method: "POST",
@@ -54,11 +48,8 @@ createForm.addEventListener("submit", function (event) {
         },  
         body: JSON.stringify(postData),
       });
-      console.log("post", response);
       if (response.ok) {
         const data = await response.json();
-        console.log(data);
-        console.log("post success");
         location.href = "./index.html";
       } else {
         const error = await response.json();

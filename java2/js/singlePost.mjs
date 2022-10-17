@@ -7,6 +7,7 @@ const postId = searchParams.get('post_id');
 const accessToken = getToken();
 const postContainer = document.querySelector(".postContainer");
 const postNotification = document.querySelector(".post__notification");
+const deleteButtons = document.getElementsByClassName('edit-post-btn');
 
 async function getPostId() {
   const response = await fetch(`${GET_POST_BY_ID_URL}/${postId}`, {
@@ -38,8 +39,8 @@ async function getPostId() {
       </a>
       <div class="time">${created}</div>
       <div class="flex--1">
-      <a href="" class="inline-flex">
-      <button class="delete-post-btn inline-flex items-center" data-id="${id}" type="button">Delete or Edit this post</button>
+      <a href="/edit.html?post_id=${id}" class="inline-flex">
+      <button class="edit-post-btn inline-flex items-center" data-id="${id}" type="button">Edit this post</button>
       </a>
     </div>
       <div class="post__notification"></div>
@@ -47,52 +48,4 @@ async function getPostId() {
         `
 
 }
-
-getPostId().then(() => {
-  handleDeleteBtnsEvents();
-});
-
-
-deleteButtons.addEventListener('click',function(){
-  
-  
-} )
-function handleDeleteBtnsEvents() {
-  const deleteButtons = document.getElementsByClassName('delete-post-btn');
-  const totalNumberOfDeleteBtns = deleteButtons.length
-  for (let i = 0; i < totalNumberOfDeleteBtns; i++) {
-    deleteButtons[i].addEventListener('click', function () {
-      const postId = this.dataset.id;
-      handleDeletePostById(postId);
-    });
-  }
-}
-
-function handleDeletePostById(id) {
-  console.log(id)
-  console.log("delete post btn clicked")
-  const deleteUser = async () => {
-    try {
-      let response = await fetch(`${DELETE_USER_POST_BY_ID}/${id}`, {
-        method: "DELETE",
-        headers: {
-          "Authorization": `Bearer ${accessToken}`
-        }
-      });
-      if (response.status === 200) {
-        console.log("post erased");
-        getPostId().then(() => {
-          handleDeleteBtnsEvents();
-        });
-      } else {
-        const err = await response.json();
-        const message = `Sorry, some error ${err}`;
-        throw new Error(message);
-      }
-    } catch (error) {
-      console.log(error)
-    }
-  }
-  deleteUser().then(r => {
-  });
-}
+getPostId();

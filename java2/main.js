@@ -8,9 +8,9 @@ createHeader();
 const logOutBtn = document.querySelector("#logout-btn");
 const accessToken = getToken();
 console.log("accessToken: ", accessToken);
-if (!accessToken) {
+/* if (!accessToken) {
     location.href = "/login.html"
-}
+} */
 
 if (logOutBtn) {
     logOutBtn.addEventListener("click", function () {

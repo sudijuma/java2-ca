@@ -8,18 +8,17 @@ createHeader();
 const logInForm = document.querySelector("#login-form");
 
 const email = document.querySelector("#email");
-console.log(email);
+
 const emailNotValid = document.querySelector("#emailNotValid");
 const emailError = document.querySelector("#emailError");
 
 const password = document.querySelector("#password");
 const passwordNotValid = document.querySelector("#passwordError");
-/* const errorMassage = document.querySelector("error-massage"); */
+
 
 if (logInForm) {
   logInForm.addEventListener("submit", function (event) {
     event.preventDefault();
-
     let isEmail = false;
     if (email.value.trim().length > 0) {
       emailError.classList.add("hidden");
@@ -43,7 +42,6 @@ if (logInForm) {
     if (password.value.trim().length >= 8) {
       passwordNotValid.classList.add("hidden");
       isPassword = true;
-      console.log("isPassword", isPassword);
     } else {
       passwordNotValid.classList.remove("hidden");
     }
@@ -54,9 +52,8 @@ if (logInForm) {
         "email": email.value,
         "password": password.value,
       };
-      console.log(userData);
-      const USER_LOGIN_URL_ENDPOINT = USER_LOGIN_URL;
 
+      const USER_LOGIN_URL_ENDPOINT = USER_LOGIN_URL;
       (async function logIn() {
         const response = await fetch(USER_LOGIN_URL_ENDPOINT, {
           method: "POST",
@@ -67,20 +64,16 @@ if (logInForm) {
         });
         if (response.ok) {
           const data = await response.json();
-          console.log("data", data);
-          console.log(data.accessToken);
           saveToken(data.accessToken);
           const userToSave = {
             "name": data.name,
             "email": data.email,
           };
-          console.log(userToSave);
           saveUser(userToSave);
           window.location.href = "./index.html";
         } else {
           const err = await response.json();
           const message = `oopsi ${err.massage}`;
-          console.log("post failed");
           throw new Error(message);
         }
       })().catch((err) => {

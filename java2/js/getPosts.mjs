@@ -10,7 +10,6 @@ const postNotification = document.querySelector(".post__notification");
 let now = moment(new Date());
 const accessToken = getToken();
 
-console.log("accessToken: ", accessToken);
 if (!accessToken) {
   location.href = "/login.html"
 }
@@ -18,7 +17,6 @@ if (!accessToken) {
 const logOutBtn = document.querySelector("#logout-btn")
 if (logOutBtn) {
   logOutBtn.addEventListener("click", function () {
-    console.log("I am clicked");
     clearStorage();
     window.location.replace("/login.html");
   })
@@ -34,7 +32,6 @@ async function getPosts() {
   })
   if (response.ok) {
     const jsonResponse = await response.json();
-    console.log("HA! Got EM")
     contentContainer.innerHTML = "";
     const posts = jsonResponse;
     if (!posts.length) {
@@ -43,7 +40,6 @@ async function getPosts() {
       const numberOfPosts = posts.length;
       for (let i = 0; i < numberOfPosts; i++) {
         const { created } = posts[i];
-        console.log(posts[i])
         const secondsSinceCreated = now.diff(created, "seconds");
         contentContainer.innerHTML += `
           <div class="postContainer--contentContainer">
@@ -65,7 +61,7 @@ async function getPosts() {
         <div class="time">${posts[i].created}</div>
         <div class="flex--1">
         <button class="delete-post-btn inline-flex items-center" data-id="${posts[i].id}" type="button">Delete</button>
-        <a href="/.edit-post.html?post_id=${posts[i].id}" class="inline-flex">Edit</a>
+        <a href="/edit.html?post_id=${posts[i].id}" class="edit-btn inline-flex">Edit</a>
       </div>
         <div class="post__notification"></div>
         </div>
@@ -74,7 +70,6 @@ async function getPosts() {
     }
   } else {
     postNotification.innerHTML = await response.json();
-    console.log("fail");
   }
 }
 
@@ -95,8 +90,6 @@ function handleDeleteBtnsEvents() {
 }
 
 function handleDeletePostById(id) {
-  console.log(id)
-  console.log("delete post btn clicked")
   const deleteUser = async () => {
     try {
       let response = await fetch(`${DELETE_USER_POST_BY_ID}/${id}`, {
@@ -106,7 +99,6 @@ function handleDeletePostById(id) {
         }
       });
       if (response.status === 200) {
-        console.log("post erased");
         getPosts().then(() => {
           handleDeleteBtnsEvents();
         });

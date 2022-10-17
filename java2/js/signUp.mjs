@@ -85,13 +85,11 @@ contactForm.addEventListener("submit", function (event) {
     isValidPasswordMatch;
 
   if (isFormValid) {
-    console.log("Validation SUCCEEDED!!  🥳");
     const userData = {
       "name": firstName.value,
       "email": email.value,
       "password": password.value,
     };
-    console.log(userData);
     const REGISTER_USER_URL_ENDPOINT = USER_SIGNUP_URL;
 
     (async function signUpUser() {

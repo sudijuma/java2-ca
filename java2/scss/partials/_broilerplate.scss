@@ -12,12 +12,12 @@ html {
 }
 
 body {
+  height: 768px;
   max-width: 1440px;
   font-family: verdana, arial, helvetica;
   margin: 0 auto;
   padding: 0;
   background-color: c.secondaryColour(primary);
-  height: fit-content;
 }
 
 h1,

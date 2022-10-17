@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="/main.js" defer></script>
-    <script type="module" src="./js/singlePost.mjs" defer></script>
+    <script type="module" src="./js/edit.mjs" defer></script>
     <title>:: Edit ::</title>
   </head>
   <section class="top-nav" id="nav-bar"></section>
@@ -14,12 +14,12 @@
       <h1 class="PostContainer--headline">
         <span class="headline--text">Good chooice, this post needs work</span>
       </h1>
-      <div class="postContainer">
+      <div class="postContainer--edit">
         <form action="submit" id="edit-post-form">
           <h2>Edit your choosen post</h2>
-          <div class="flex flex-col">
+          <div class="flex-col">
             <label for="postTitle" class="form-text"
-              >Post title: (is required)</label
+              >Post title: (3 characters minimum)</label
             >
             <input
               type="text"
@@ -32,12 +32,20 @@
               post title is required
             </span>
           </div>
-          <div class="flex flex-col">
+          <div class="flex-col">
             <label for="postText" class="form-text">Text is required</label>
-            <textarea name="postText" id="postText" cols="30" rows="10" class="block" placeholder="Update me baby"></textarea>
-            <span class="hidden" id="postTextError">Post Text is required M'kaaay</span>
+            <textarea
+              name="postText"
+              id="postText"
+              cols="30"
+              rows="10"
+              class="block"
+              placeholder="Update me baby"
+            ></textarea>
+            <span class="hidden" id="postTextError"
+              >Post Text is required M'kaaay</span
+            >
           </div>
-          <button class="delete-btn justify-center">Delete</button>
           <button class="edit-btn justify-center">Edit</button>
         </form>
       </div>

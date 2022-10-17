@@ -73,3 +73,23 @@
     color: c.secondaryColour(grey);
   }
 }
+.edit-btn {
+  width: auto;
+  font-size: 2rem;
+}
+.postContainer--edit {
+  grid-template-columns: 1fr;
+  display: grid;
+  max-width: 400px;
+  padding: 2em;
+  margin: 8em auto;
+  box-shadow: 0 8px 19px -8px c.colourfull(primary);
+  border-radius: 4px;
+}
+
+.flex-col {
+  flex-direction: row;
+}
+.form-text{
+  color: c.secondaryColour(accent);
+}
