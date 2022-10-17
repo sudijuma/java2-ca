@@ -7,12 +7,11 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  background-color: #00baf0;
+  justify-content: center;
   background: linear-gradient(
     to left,
-    c.colourfull(primary),
-    c.colourfull(secondary)
+    c.colourfull(accent),
+    c.colourfull(primary)
   );
   color: #fff;
   height: 50px;
@@ -26,12 +25,12 @@
   list-style-type:none;
   margin: 0;
   padding: 0;
+  color: white;
 }
 
 .menu > li {
-  margin: 0 5rem;
+  margin: 0 5em;
   overflow: hidden;
-  color: c.colourfull(viridian);
 }
 
 .menu-button-container {
@@ -48,9 +47,6 @@
   display: none;
 }
 
-.text_menu_logged_in{
-
-}
 .menu-button,
 .menu-button::before,
 .menu-button::after {

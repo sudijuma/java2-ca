@@ -10,6 +10,7 @@ export default defineConfig({
                 landingpage: resolve(__dirname, 'landingpage.html'),
                 signup: resolve(__dirname, 'signup.html'),
                 createpost: resolve(__dirname, 'createpost.html'),
+                singlepost: resolve(__dirname, 'single-post.html'),
             },
         },
     }
