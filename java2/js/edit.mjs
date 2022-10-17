@@ -9,11 +9,7 @@ const postTitleError = document.querySelector("#postTitleError");
 const postText = document.querySelector("#postText");
 const postTextError = document.querySelector("#postTextError");
 
-console.log(editForm)
-console.log(postTitle)
-console.log(postTitleError)
-console.log(postText)
-console.log(postTextError)
+const postNotification = document.querySelector(".postNotification")
 
 const paramString = window.location.search;
 const searchParam = new URLSearchParams(paramString);
@@ -30,9 +26,6 @@ async function getPostById() {
     if (response.status === 200) {
         const data = await response.json();
         const { title, body, created, updated, id } = data;
-        console.log(created);
-        console.log(updated);
-        console.log(id);
         postTitle.value = title;
         postText.value = body;
     } else {
@@ -63,9 +56,6 @@ editForm.addEventListener("submit", function (event) {
     let editFormValid = hasPostTitle && hasPostText;
 
     if (editFormValid) {
-        console.log("validation succeeded");
-        console.log(postText.value);
-        console.log(postText.value);
         const postData = {
             "title": postTitle.value,
             "body": postText.value
@@ -84,11 +74,8 @@ editForm.addEventListener("submit", function (event) {
                 },
                 body: JSON.stringify(postData)
             })
-            console.log("post edit response", response);
             if (response.ok) {
                 const data = await response.json();
-                console.log(data);
-                console.log("edit succeeded");
                 location.href = `/single-post.html?post_id=${postId}`;
             } else {
                 const err = await response.json();
@@ -97,7 +84,7 @@ editForm.addEventListener("submit", function (event) {
             }
             editForm.reset();
         })().catch(err => {
-            console.log(err)
+            postNotification.innerHTML = "<p>You can only edit your own posts</p>";
         });
     } else {
         console.log("Validation failed");

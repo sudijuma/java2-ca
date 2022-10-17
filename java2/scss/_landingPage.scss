@@ -10,14 +10,14 @@
   @include breakePoints.min_width(medium) {
     flex-direction: row;
   }
-  max-width: 500px;
+  max-width: 1200px;
   margin: 15em auto;
   padding: 0.5em;
 }
 
 .flexBox {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   border: 2px solid c.colourfull(june_bud);
   height: 15em;
