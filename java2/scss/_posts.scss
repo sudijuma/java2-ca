@@ -76,7 +76,12 @@
 }
 .edit-btn {
   width: auto;
-  font-size: 2rem;
+  font-size: 1rem;
+}
+
+.delete-post-btn {
+  width: 20%;
+  background-color: c.lavender(steel);
 }
 .postContainer--edit {
   grid-template-columns: 1fr;
@@ -95,6 +100,6 @@
   color: c.secondaryColour(accent);
 }
 
-.postNotification{
+.postNotification {
   color: c.colourfull(primary);
 }

@@ -58,7 +58,6 @@ async function getPosts() {
             </div>
           </div>
         </a>
-        <div class="time">${posts[i].created}</div>
         <div class="">
         <button class="delete-post-btn inline-flex items-center" data-id="${posts[i].id}" type="button">Delete</button>
         <a href="/edit.html?post_id=${posts[i].id}" class="edit-btn inline-flex">Edit</a>
