@@ -8,7 +8,7 @@ function createHeader() {
     if (navBar) {
         const userName = getUserName();
         let dynamicLinks = `
-        <div>Logo Here</div>
+        <div>Mwakie</div>
         <input id="menu-toggle" type="checkbox" />
         <label class="menu-button-container" for="menu-toggle">
           <div class="menu-button"></div>
@@ -20,12 +20,13 @@ function createHeader() {
         `;
         if (userName) {
             dynamicLinks = `
-    <div>Logo Here</div>
+    
     <input id="menu-toggle" type="checkbox" />
     <label class="menu-button-container" for="menu-toggle">
         <div class="menu-button"></div>
     </label>
         <ul class="menu">
+        <div>Mwakie</div>
             <li>
                 <a href="/index.html" class="${pathname === "/index.html" ? "text_menu_logged_in" : ""}">Home</a>
             </li>
