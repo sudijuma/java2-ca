@@ -22,7 +22,6 @@ function getUserName() {
         return null;
     }
 }
-// save user object
 function saveUser(user) {
     saveToStorage(userKey, user);
 }
