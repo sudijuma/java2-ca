@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="/main.js" defer></script>
+    <script type="module" src="./js/singlePost.mjs" defer></script>
+    <title>:: Edit ::</title>
+  </head>
+  <section class="top-nav" id="nav-bar"></section>
+  <body class="postBody">
+    <section class="postMain">
+      <h1 class="PostContainer--headline">
+        <span class="headline--text">Good chooice, this post needs work</span>
+      </h1>
+      <div class="postContainer">
+        <form action="submit" id="edit-post-form">
+          <h2>Edit your choosen post</h2>
+          <div class="flex flex-col">
+            <label for="postTitle" class="form-text"
+              >Post title: (is required)</label
+            >
+            <input
+              type="text"
+              class="input-field"
+              id="postTitle"
+              name="postTitle"
+              placeholder="Enter post title pls"
+            />
+            <span class="hidden" id="postTitleError">
+              post title is required
+            </span>
+          </div>
+          <div class="flex flex-col">
+            <label for="postText" class="form-text">Text is required</label>
+            <textarea name="postText" id="postText" cols="30" rows="10" class="block" placeholder="Update me baby"></textarea>
+            <span class="hidden" id="postTextError">Post Text is required M'kaaay</span>
+          </div>
+          <button class="delete-btn justify-center">Delete</button>
+          <button class="edit-btn justify-center">Edit</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

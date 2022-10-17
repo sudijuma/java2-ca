@@ -11,6 +11,7 @@ export default defineConfig({
                 signup: resolve(__dirname, 'signup.html'),
                 createpost: resolve(__dirname, 'createpost.html'),
                 singlepost: resolve(__dirname, 'single-post.html'),
+                edit: resolve(__dirname, 'edit.html'),
             },
         },
     }
