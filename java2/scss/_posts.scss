@@ -21,9 +21,9 @@
 }
 
 .PostContainer--headline {
-  font-weight: 400;
+  font-weight: 600;
   & .headline--text {
-    color: c.colourfull(primary);
+    color: c.colourfull(accent);
   }
 }
 
@@ -94,7 +94,7 @@
 }
 
 .flex-col {
-  flex-direction: row;
+  width:auto;
 }
 .form-text {
   color: c.secondaryColour(accent);
@@ -103,3 +103,9 @@
 .postNotification {
   color: c.colourfull(primary);
 }
+
+#post-title {
+  width: 50%;
+}
+
+

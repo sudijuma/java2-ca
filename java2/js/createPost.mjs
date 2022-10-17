@@ -1,5 +1,7 @@
 import { getToken } from "./utilities/storage.mjs";
 import { CREATE_POST_URL } from "./API_URL/apiUrl.mjs";
+import createHeader from "./components/header";
+createHeader();
 
 const createForm = document.querySelector("#create-form");
 
@@ -8,11 +10,6 @@ const postText = document.querySelector("#postText");
 
 const postTitleError = document.querySelector("#postTitleError");
 const postError = document.querySelector("#postTextError");
-
-console.log(createForm);
-console.log(postTitle);
-console.log(postText);
-console.log(postError);
 
 createForm.addEventListener("submit", function (event) {
   event.preventDefault();

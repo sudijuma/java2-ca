@@ -40,7 +40,7 @@ getPostById().catch(err => {
 editForm.addEventListener("submit", function (event) {
     event.preventDefault();
     let hasPostTitle = false;
-    if (postTitle.value.trim().length > 3) {
+    if (postTitle.value.trim().length > 2) {
         postTitleError.classList.add("hidden");
         hasPostTitle = true;
     } else {
@@ -48,7 +48,7 @@ editForm.addEventListener("submit", function (event) {
     }
 
     let hasPostText = false;
-    if (postText.value.trim().length > 5) {
+    if (postText.value.trim().length > 4) {
         postTextError.classList.add("hidden");
         hasPostText = true;
     }

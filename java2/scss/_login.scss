@@ -1,5 +1,12 @@
 @use "./partials/abstracts/colours" as c;
 
+.form__container{
+  max-width: 500px;
+  margin: 6em auto;
+}
+.login-h1{
+  color: c.primaryColour(li);
+}
 button {
   background-color: c.lavender(viridian);
   width: 100%;
