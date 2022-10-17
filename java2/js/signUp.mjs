@@ -105,16 +105,15 @@ contactForm.addEventListener("submit", function (event) {
         const data = await response.json();
 
         if (response.ok) {
-          console.log("POST REQUEST SUCCEEDED!!  🥳 🤗🤗");
           window.location.href = "./index.html";
         } else {
-          generalErrorMessage.innerHTML = `Sorry !! ${data.message}`;
+          generalErrorMessage.innerHTML = `sorry, no data ${data.message}`;
         }
       } catch (e) {
         console.log(e);
       }
     })();
   } else {
-    console.log("Validation FAILED!! 💩");
+    console.log("Validation failed");
   }
 });
