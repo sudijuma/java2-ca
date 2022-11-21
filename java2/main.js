@@ -7,10 +7,6 @@ import { getToken } from "./js/utilities/storage.mjs";
 createHeader();
 const logOutBtn = document.querySelector("#logout-btn");
 const accessToken = getToken();
-console.log("accessToken: ", accessToken);
-/* if (!accessToken) {
-    location.href = "/login.html"
-} */
 
 if (logOutBtn) {
     logOutBtn.addEventListener("click", function () {
@@ -19,4 +15,3 @@ if (logOutBtn) {
         window.location.replace("/landingpage.html");
     })
 }
-//TODO ändra strukturen!!
