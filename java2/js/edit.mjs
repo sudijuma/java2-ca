@@ -25,7 +25,7 @@ async function getPostById() {
     })
     if (response.status === 200) {
         const data = await response.json();
-        const { title, body, created, updated, id } = data;
+        const { title, body } = data;
         postTitle.value = title;
         postText.value = body;
     } else {
