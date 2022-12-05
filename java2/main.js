@@ -15,3 +15,4 @@ if (logOutBtn) {
         window.location.replace("/landingpage.html");
     })
 }
+
